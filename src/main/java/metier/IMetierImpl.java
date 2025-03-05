@@ -1,11 +1,16 @@
 package metier;
 
 import dao.IDao;
+import org.springframework.stereotype.Service;
 
+
+@Service("metier")
 public class IMetierImpl implements IMetier {
     private IDao dao;
 
 
+    public IMetierImpl() {
+    }
     public IMetierImpl(IDao dao) {
         this.dao = dao;
     }
